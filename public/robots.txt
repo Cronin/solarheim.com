@@ -1,0 +1,8 @@
+# Robots.txt for Solarheim.com
+# Allow all search engines to index all content
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://solarheim.com/sitemap.xml
