@@ -7,18 +7,26 @@ import TrustBadges from '@/components/TrustBadges';
 import FAQ from '@/components/FAQ';
 import { Sun, MapPin, TrendingUp, CheckCircle } from 'lucide-react';
 
+// Force static rendering
+export const dynamic = 'force-static';
+export const revalidate = false;
+
 interface PageProps {
   params: {
     city: string;
   };
 }
 
+// Generate static params for all cities at build time
 export async function generateStaticParams() {
   const slugs = getAllCitySlugs();
   return slugs.map((slug) => ({
     city: slug,
   }));
 }
+
+// Force static generation for all city pages
+export const dynamicParams = false;
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const city = getCityBySlug(params.city);
