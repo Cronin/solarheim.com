@@ -44,7 +44,7 @@ export default function Hero() {
           <div className="relative">
             <div className="aspect-square lg:aspect-auto lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-primary-50 to-white">
               <Image
-                src="/images/hero-solar-panels.jpg"
+                src="/images/hero-solar-panels.webp"
                 alt="Photovoltaik Solaranlagen - Professionelle Solar Panels auf Schweizer Haus"
                 width={1200}
                 height={800}
