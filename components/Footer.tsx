@@ -27,9 +27,9 @@ export default function Footer() {
                 <Mail className="w-4 h-4" />
                 info@solarheim.com
               </a>
-              <a href="tel:+41445454545" className="flex items-center gap-2 text-sm hover:text-primary transition-colors">
+              <a href="tel:+41774420059" className="flex items-center gap-2 text-sm hover:text-primary transition-colors">
                 <Phone className="w-4 h-4" />
-                +41 44 545 45 45
+                +41 77 442 00 59
               </a>
             </div>
           </div>

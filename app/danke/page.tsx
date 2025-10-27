@@ -82,9 +82,9 @@ export default function ThankYouPage() {
                 <Mail className="w-4 h-4" />
                 info@solarheim.com
               </a>
-              <a href="tel:+41445454545" className="flex items-center justify-center gap-2 text-gray-700 hover:text-primary transition-colors">
+              <a href="tel:+41774420059" className="flex items-center justify-center gap-2 text-gray-700 hover:text-primary transition-colors">
                 <Phone className="w-4 h-4" />
-                +41 44 545 45 45
+                +41 77 442 00 59
               </a>
             </div>
           </div>

@@ -25,7 +25,7 @@
 
 ### ✅ Contact Information (REQUIRED)
 - [x] Email: info@solarheim.com (Footer)
-- [x] Phone: +41 44 545 45 45 (Footer)
+- [x] Phone: +41 77 442 00 59 (Footer)
 - [x] Company name: Solarheim (visible throughout site)
 
 ### ✅ Legal Pages (REQUIRED)

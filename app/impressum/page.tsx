@@ -20,7 +20,7 @@ export default function ImpressumPage() {
             <p className="text-gray-600 mb-2">8000 Zürich</p>
             <p className="text-gray-600 mb-2">Schweiz</p>
             <p className="text-gray-600 mb-2">
-              <strong>Telefon:</strong> +41 44 545 45 45
+              <strong>Telefon:</strong> +41 77 442 00 59
             </p>
             <p className="text-gray-600 mb-2">
               <strong>E-Mail:</strong> info@solarheim.com

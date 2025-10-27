@@ -6,6 +6,7 @@ import USPSection from '@/components/USPSection';
 import TrustBadges from '@/components/TrustBadges';
 import FAQ from '@/components/FAQ';
 import { Sun, MapPin, TrendingUp, CheckCircle } from 'lucide-react';
+import Image from 'next/image';
 
 // Force static rendering
 export const dynamic = 'force-static';
@@ -185,6 +186,44 @@ export default function CityPage({ params }: PageProps) {
                 Mit Solarheim finden Sie schnell und einfach die passenden Solarteure in {city.name}. Vergleichen Sie kostenlos mehrere
                 Angebote und profitieren Sie von unserem schweizweiten Netzwerk geprüfter Fachbetriebe.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Image + Map Section */}
+      <section className="section-padding bg-gray-50">
+        <div className="container-custom max-w-6xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            {/* Solar Panel Image */}
+            <div className="relative rounded-2xl overflow-hidden shadow-xl">
+              <Image
+                src="/images/hero-solar-panels.webp"
+                alt={`Solaranlage Installation in ${city.name}`}
+                width={600}
+                height={400}
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Google Maps */}
+            <div className="relative rounded-2xl overflow-hidden shadow-xl h-[400px]">
+              <iframe
+                src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=${encodeURIComponent(city.name + ', Schweiz')}&zoom=12`}
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title={`Karte von ${city.name}`}
+              />
+              <div className="absolute bottom-4 left-4 bg-white px-4 py-2 rounded-lg shadow-lg">
+                <div className="flex items-center gap-2">
+                  <MapPin className="w-4 h-4 text-primary" />
+                  <span className="font-semibold text-gray-900">{city.name}</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>

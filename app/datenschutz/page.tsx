@@ -27,7 +27,7 @@ export default function DatenschutzPage() {
             Schweiz<br />
             <br />
             E-Mail: info@solarheim.com<br />
-            Telefon: +41 44 545 45 45
+            Telefon: +41 77 442 00 59
           </p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">2. Erhebung und Verarbeitung personenbezogener Daten</h2>

@@ -275,7 +275,7 @@ Proprietary - All rights reserved
 
 For questions or support:
 - Email: info@solarheim.com
-- Phone: +41 44 545 45 45
+- Phone: +41 77 442 00 59
 
 ---
 
