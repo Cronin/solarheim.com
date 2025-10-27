@@ -25,13 +25,13 @@ export default function TrustBadges() {
   ];
 
   return (
-    <section className="section-padding bg-gray-900 text-white">
+    <section className="section-padding bg-white">
       <div className="container-custom">
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">
             Ihr Vertrauen ist uns wichtig
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Über 10.000 zufriedene Kunden vertrauen bereits auf Solarheim
           </p>
         </div>
@@ -40,7 +40,7 @@ export default function TrustBadges() {
           {badges.map((badge, index) => (
             <div
               key={index}
-              className="bg-gray-800 rounded-2xl p-6 text-center hover:bg-gray-750 transition-all hover:scale-105"
+              className="bg-white border border-gray-200 rounded-2xl p-6 text-center hover:border-gray-300 hover:shadow-lg transition-all hover:scale-105"
             >
               <div className="inline-flex items-center justify-center mb-4 mx-auto">
                 <Image
@@ -51,10 +51,10 @@ export default function TrustBadges() {
                   className="w-32 h-32 md:w-36 md:h-36 object-contain"
                 />
               </div>
-              <h3 className="font-bold text-white text-lg mb-2">
+              <h3 className="font-bold text-gray-900 text-lg mb-2">
                 {badge.title}
               </h3>
-              <p className="text-sm text-gray-400">
+              <p className="text-sm text-gray-600">
                 {badge.description}
               </p>
             </div>
@@ -65,24 +65,24 @@ export default function TrustBadges() {
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
           <div className="text-center">
             <div className="text-4xl font-bold text-primary mb-2">10.000+</div>
-            <div className="text-gray-400">Zufriedene Kunden</div>
+            <div className="text-gray-600">Zufriedene Kunden</div>
           </div>
           <div className="text-center">
             <div className="text-4xl font-bold text-primary mb-2">500+</div>
-            <div className="text-gray-400">Partner-Installateure</div>
+            <div className="text-gray-600">Partner-Installateure</div>
           </div>
           <div className="text-center">
             <div className="text-4xl font-bold text-primary mb-2">15+</div>
-            <div className="text-gray-400">Jahre Erfahrung</div>
+            <div className="text-gray-600">Jahre Erfahrung</div>
           </div>
           <div className="text-center">
             <div className="text-4xl font-bold text-primary mb-2">100%</div>
-            <div className="text-gray-400">Kostenlos</div>
+            <div className="text-gray-600">Kostenlos</div>
           </div>
         </div>
 
         {/* Trust Logos */}
-        <div className="mt-16 pt-12 border-t border-gray-800">
+        <div className="mt-16 pt-12 border-t border-gray-200">
           <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 opacity-70 hover:opacity-100 transition-opacity">
             <Image
               src="/images/logos/proven-expert.svg"
