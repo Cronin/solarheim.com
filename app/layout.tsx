@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Analytics } from "@/components/Analytics";
+import { Suspense } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -48,7 +49,9 @@ export default function RootLayout({
   return (
     <html lang="de-CH" className="scroll-smooth">
       <body className={inter.className}>
-        <Analytics />
+        <Suspense fallback={null}>
+          <Analytics />
+        </Suspense>
         <Header />
         <main>{children}</main>
         <Footer />
