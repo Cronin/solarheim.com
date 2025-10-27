@@ -44,9 +44,9 @@ export default function Hero() {
           <div className="relative">
             <div className="aspect-square lg:aspect-auto lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-primary-50 to-white">
               <Image
-                src="/images/hero-modern.svg"
-                alt="Solaranlagen in der Schweiz - Haus mit Solarpanels"
-                width={600}
+                src="/images/hero-solar-realistic.svg"
+                alt="Photovoltaik Solaranlagen - Professionelle Solar Panels"
+                width={800}
                 height={600}
                 className="w-full h-full object-contain"
                 priority

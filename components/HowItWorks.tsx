@@ -36,18 +36,18 @@ export default function HowItWorks() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 relative">
           {/* Connection Lines for Desktop */}
-          <div className="hidden md:block absolute top-20 left-0 right-0 h-0.5 bg-gradient-to-r from-primary-200 via-primary-300 to-primary-200 transform translate-y-[-50%]"
+          <div className="hidden md:block absolute top-20 left-0 right-0 h-0.5 bg-gradient-to-r from-primary-200 via-primary-300 to-primary-200 transform translate-y-[-50%] z-0"
                style={{ left: '16.67%', right: '16.67%' }} />
 
           {steps.map((item, index) => (
-            <div key={index} className="relative">
+            <div key={index} className="relative z-10">
               <div className="text-center">
                 {/* Step Number Badge */}
                 <div className="relative inline-block mb-6">
-                  <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-lg border-4 border-primary-100 relative z-10">
+                  <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-lg border-4 border-primary-100 relative z-20">
                     <item.icon className="w-10 h-10 text-primary" />
                   </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white font-bold text-sm shadow-md">
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white font-bold text-sm shadow-md z-30">
                     {item.step}
                   </div>
                 </div>

@@ -80,6 +80,33 @@ export default function TrustBadges() {
             <div className="text-gray-400">Kostenlos</div>
           </div>
         </div>
+
+        {/* Trust Logos */}
+        <div className="mt-16 pt-12 border-t border-gray-800">
+          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 opacity-70 hover:opacity-100 transition-opacity">
+            <Image
+              src="/images/logos/proven-expert.svg"
+              alt="Proven Expert - 100% Empfehlungen"
+              width={120}
+              height={60}
+              className="h-12 w-auto"
+            />
+            <Image
+              src="/images/logos/swiss-quality.svg"
+              alt="Swiss Quality - Schweizer Qualität"
+              width={60}
+              height={60}
+              className="h-12 w-auto"
+            />
+            <Image
+              src="/images/logos/trustpilot.svg"
+              alt="Trustpilot - Kundenbewertungen"
+              width={120}
+              height={30}
+              className="h-8 w-auto"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );
