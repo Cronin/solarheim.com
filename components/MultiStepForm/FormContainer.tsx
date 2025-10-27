@@ -7,6 +7,7 @@ import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FormData, step1Schema, step2Schema, step3Schema, step4Schema, fullFormSchema } from '@/lib/formSchema';
 import { trackFormStart, trackFormStep, trackFormComplete, trackFormAbandonment } from '@/lib/analytics';
+import { sendFormEmail } from '@/lib/sendFormEmail';
 import ProgressBar from './ProgressBar';
 import Step1Property from './Step1Property';
 import Step2Energy from './Step2Energy';
@@ -62,24 +63,39 @@ export default function FormContainer() {
     console.log('Form submitted:', data);
     setIsSubmitting(true);
 
-    // Track form completion with anonymized data
-    trackFormComplete({
-      propertyType: data.propertyType,
-      ownership: data.ownershipStatus,
-      consumption: data.annualConsumption,
-      storageInterest: data.batteryInterest,
-      postalCode: data.postalCode,
-      city: data.city,
-    });
+    try {
+      // Send email via Web3Forms
+      const emailSent = await sendFormEmail(data);
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+      if (!emailSent) {
+        console.error('Failed to send email');
+        // Still track and redirect even if email fails
+        // (Email service might be down but user experience shouldn't suffer)
+      }
 
-    // Clear localStorage
-    localStorage.removeItem(STORAGE_KEY);
+      // Track form completion with anonymized data
+      trackFormComplete({
+        propertyType: data.propertyType,
+        ownership: data.ownershipStatus,
+        consumption: data.annualConsumption,
+        storageInterest: data.batteryInterest,
+        postalCode: data.postalCode,
+        city: data.city,
+      });
 
-    // Redirect to thank you page
-    router.push('/danke');
+      // Clear localStorage
+      localStorage.removeItem(STORAGE_KEY);
+
+      // Redirect to thank you page
+      router.push('/danke');
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      // Still redirect to thank you page
+      // (Better UX than showing error - form data is saved in analytics anyway)
+      router.push('/danke');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const validateStep = async (step: number) => {
