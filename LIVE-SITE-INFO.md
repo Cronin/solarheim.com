@@ -16,10 +16,10 @@ Your complete solar lead generation website for Switzerland is now **LIVE** and 
 - https://solarheimcom-24prontocom-3782-rosario-minopolis-projects.vercel.app
 
 ### Custom Domain Setup
-To use **solarheim.com** as your primary domain:
-1. Go to Vercel Dashboard: https://vercel.com/rosario-minopolis-projects/solarheim.com
+To use **solarheim.ch** as your primary domain:
+1. Go to Vercel Dashboard: https://vercel.com/rosario-minopolis-projects/solarheim.ch
 2. Click "Settings" → "Domains"
-3. Add domain: `solarheim.com`
+3. Add domain: `solarheim.ch`
 4. Follow DNS instructions to point your domain to Vercel
 
 ---
@@ -159,7 +159,7 @@ Test these key pages to verify everything works:
    - Check all major city pages
 
 2. **Configure Custom Domain** (Optional)
-   - Add `solarheim.com` in Vercel dashboard
+   - Add `solarheim.ch` in Vercel dashboard
    - Update DNS records at your domain registrar
    - Verify SSL certificate is active
 
@@ -203,10 +203,10 @@ Test these key pages to verify everything works:
 ## 📱 Contact & Support
 
 ### Vercel Dashboard
-https://vercel.com/rosario-minopolis-projects/solarheim.com
+https://vercel.com/rosario-minopolis-projects/solarheim.ch
 
 ### Project Files
-Location: `/Users/claudiocronin/websites/sites/solarheim.com`
+Location: `/Users/claudiocronin/websites/sites/solarheim.ch`
 
 ### Documentation
 - `README.md` - Complete project documentation

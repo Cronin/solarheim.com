@@ -23,10 +23,10 @@ export default function ImpressumPage() {
               <strong>Telefon:</strong> +41 77 442 00 59
             </p>
             <p className="text-gray-600 mb-2">
-              <strong>E-Mail:</strong> info@solarheim.com
+              <strong>E-Mail:</strong> info@solarheim.ch
             </p>
             <p className="text-gray-600">
-              <strong>Website:</strong> www.solarheim.com
+              <strong>Website:</strong> www.solarheim.ch
             </p>
           </div>
 

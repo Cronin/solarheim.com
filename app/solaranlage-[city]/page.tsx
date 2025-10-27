@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     openGraph: {
       title: `Solaranlage ${city.name} - Photovoltaik Offerte vergleichen`,
       description: `Kostenlos Solaranlagen-Angebote in ${city.name} vergleichen. Geprüfte lokale Installateure, bis zu 30% sparen.`,
-      url: `https://solarheim.com/solaranlage-${params.city}`,
+      url: `https://solarheim.ch/solaranlage-${params.city}`,
     },
   };
 }

@@ -3,7 +3,7 @@
 ## 🎯 Current Status
 
 **PROJECT**: Production-ready, awaiting final deployment push
-**LOCATION**: `/Users/claudiocronin/websites/sites/solarheim.com`
+**LOCATION**: `/Users/claudiocronin/websites/sites/solarheim.ch`
 **GIT**: 4 commits on main branch, all changes committed
 **BUILD**: ✅ Successful (12 routes compiled)
 **DEPLOYMENT**: Needs manual push to Vercel (see instructions below)
@@ -62,13 +62,13 @@
 - **Project ID**: `prj_A3PxfuwPIOVCOU1mf6azeY6WamEQ`
 - **Team ID**: `team_FDUyZX1XQUpeK0mwccRxaeoW`
 - **Current URL**: https://solarheimcom.vercel.app (old deployment)
-- **Dashboard**: https://vercel.com/rosario-minopolis-projects/solarheim.com
+- **Dashboard**: https://vercel.com/rosario-minopolis-projects/solarheim.ch
 
 ### Deploy Now (Choose One Method)
 
 #### Method 1: Vercel CLI (Fastest)
 ```bash
-cd /Users/claudiocronin/websites/sites/solarheim.com
+cd /Users/claudiocronin/websites/sites/solarheim.ch
 
 # Login to Vercel (if needed)
 npx vercel login
@@ -87,7 +87,7 @@ git push origin main
 ```
 
 #### Method 3: Vercel Dashboard (Manual)
-1. Go to https://vercel.com/rosario-minopolis-projects/solarheim.com
+1. Go to https://vercel.com/rosario-minopolis-projects/solarheim.ch
 2. Click "Deployments" → "Deploy"
 3. Select "main" branch
 4. Click "Deploy"
@@ -166,7 +166,7 @@ Route (app)                              Size     First Load JS
 
 ### Short Term (Week 1)
 1. **Configure Custom Domain**
-   - Add solarheim.com in Vercel dashboard
+   - Add solarheim.ch in Vercel dashboard
    - Update DNS records
    - Verify SSL certificate
 

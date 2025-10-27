@@ -23,9 +23,13 @@ export default function Footer() {
               Die führende Vergleichsplattform für Solaranlagen in der Schweiz. Kostenlos und unverbindlich.
             </p>
             <div className="flex flex-col gap-2">
-              <a href="mailto:info@solarheim.com" className="flex items-center gap-2 text-sm hover:text-primary transition-colors">
+              <div className="text-sm text-gray-400">
+                Culmannstrasse 37<br />
+                8006 Zürich, Schweiz
+              </div>
+              <a href="mailto:info@solarheim.ch" className="flex items-center gap-2 text-sm hover:text-primary transition-colors">
                 <Mail className="w-4 h-4" />
-                info@solarheim.com
+                info@solarheim.ch
               </a>
               <a href="tel:+41774420059" className="flex items-center gap-2 text-sm hover:text-primary transition-colors">
                 <Phone className="w-4 h-4" />

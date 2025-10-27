@@ -24,7 +24,7 @@
 ## ✅ **3. LEGAL REQUIREMENTS (Google Ads Policy)**
 
 ### ✅ Contact Information (REQUIRED)
-- [x] Email: info@solarheim.com (Footer)
+- [x] Email: info@solarheim.ch (Footer)
 - [x] Phone: +41 77 442 00 59 (Footer)
 - [x] Company name: Solarheim (visible throughout site)
 
@@ -156,7 +156,7 @@ NEXT_PUBLIC_GTM_ID=GTM-XXXXXXX
 ## 🎯 **RECOMMENDED GOOGLE ADS CAMPAIGNS**
 
 ### Campaign 1: Search - Brand
-- Keywords: "solarheim", "solarheim.com", "solarheim schweiz"
+- Keywords: "solarheim", "solarheim.ch", "solarheim schweiz"
 - Landing page: Homepage
 
 ### Campaign 2: Search - Generic
@@ -205,7 +205,7 @@ NEXT_PUBLIC_GTM_ID=GTM-XXXXXXX
 ### 2. Verify Google Search Console (10 minutes)
 - Add property in Google Search Console
 - Verify ownership
-- Submit sitemap: https://solarheim.com/sitemap.xml
+- Submit sitemap: https://solarheim.ch/sitemap.xml
 
 ### 3. Create Google Ads Account (15 minutes)
 - Link to GA4 property
@@ -216,7 +216,7 @@ NEXT_PUBLIC_GTM_ID=GTM-XXXXXXX
 - Start with Search campaign
 - Budget: CHF 20-50/day to start
 - Target: German-speaking Switzerland
-- Landing page: https://solarheim.com
+- Landing page: https://solarheim.ch
 
 ---
 

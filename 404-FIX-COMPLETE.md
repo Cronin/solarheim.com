@@ -107,7 +107,7 @@ The fix is complete and committed. Now you need to deploy:
 ### Deploy Now
 
 ```bash
-cd /Users/claudiocronin/websites/sites/solarheim.com
+cd /Users/claudiocronin/websites/sites/solarheim.ch
 
 # Option 1: Vercel CLI
 npx vercel --prod

@@ -231,7 +231,7 @@ All content is in German (Hochdeutsch) for Swiss audience:
 
 1. Push to GitHub
 2. Import project in Vercel
-3. Configure domain: solarheim.com
+3. Configure domain: solarheim.ch
 4. Deploy
 
 Environment variables needed:
@@ -274,7 +274,7 @@ Proprietary - All rights reserved
 ## Contact
 
 For questions or support:
-- Email: info@solarheim.com
+- Email: info@solarheim.ch
 - Phone: +41 77 442 00 59
 
 ---

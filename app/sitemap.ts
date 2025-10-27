@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { getAllCitySlugs } from '@/lib/cities';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://solarheim.com';
+  const baseUrl = 'https://solarheim.ch';
   const currentDate = new Date();
 
   // Static pages

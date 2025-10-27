@@ -18,7 +18,7 @@ If you have connected your Git repository to Vercel, deployment is automatic:
    - Update all URLs
 
 3. **Check deployment status**:
-   - Go to: https://vercel.com/rosario-minopolis-projects/solarheim.com
+   - Go to: https://vercel.com/rosario-minopolis-projects/solarheim.ch
    - View the "Deployments" tab
 
 ### Option 2: Manual Deployment via CLI
@@ -114,7 +114,7 @@ After successful deployment:
 
 - Vercel Documentation: https://vercel.com/docs
 - Next.js Documentation: https://nextjs.org/docs
-- Project Dashboard: https://vercel.com/rosario-minopolis-projects/solarheim.com
+- Project Dashboard: https://vercel.com/rosario-minopolis-projects/solarheim.ch
 
 ---
 

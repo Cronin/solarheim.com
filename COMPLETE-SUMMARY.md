@@ -268,7 +268,7 @@ NEXT_PUBLIC_GTM_ID=GTM-XXXXXXX
 
 **Opzione A - CLI**:
 ```bash
-cd /Users/claudiocronin/websites/sites/solarheim.com
+cd /Users/claudiocronin/websites/sites/solarheim.ch
 npx vercel login
 npx vercel --prod
 ```
@@ -279,7 +279,7 @@ git push origin main
 ```
 
 **Opzione C - Dashboard**:
-1. Vai a https://vercel.com/rosario-minopolis-projects/solarheim.com
+1. Vai a https://vercel.com/rosario-minopolis-projects/solarheim.ch
 2. Click "Deploy"
 3. Seleziona branch "main"
 
@@ -309,7 +309,7 @@ Test questi URL dopo il deploy:
 ## 📁 STRUTTURA FILE FINALE
 
 ```
-solarheim.com/
+solarheim.ch/
 ├── app/
 │   ├── layout.tsx                    ← Analytics integrato ✅
 │   ├── page.tsx                      ← Homepage
@@ -474,7 +474,7 @@ solarheim.com/
    - Testare in Preview mode
 
 3. **Domain Custom**
-   - Collegare solarheim.com a Vercel
+   - Collegare solarheim.ch a Vercel
    - Configurare DNS
    - Verificare SSL certificate
 
@@ -559,7 +559,7 @@ Il sito Solarheim.com è:
 
 ### Deploy Ora
 ```bash
-cd /Users/claudiocronin/websites/sites/solarheim.com
+cd /Users/claudiocronin/websites/sites/solarheim.ch
 npx vercel --prod
 ```
 

@@ -24,7 +24,7 @@ The website is production-ready and can be deployed immediately to Vercel.
 
 3. **Configure Domain**
    - In Vercel project settings, go to "Domains"
-   - Add custom domain: `solarheim.com`
+   - Add custom domain: `solarheim.ch`
    - Follow DNS configuration instructions
 
 ### Option 2: Vercel CLI
@@ -34,7 +34,7 @@ The website is production-ready and can be deployed immediately to Vercel.
 npm i -g vercel
 
 # Deploy
-cd /Users/claudiocronin/websites/sites/solarheim.com
+cd /Users/claudiocronin/websites/sites/solarheim.ch
 vercel
 
 # Deploy to production
@@ -47,7 +47,7 @@ No environment variables are required. All pages are statically generated at bui
 
 ## DNS Configuration
 
-### For solarheim.com
+### For solarheim.ch
 
 Add these DNS records to your domain registrar:
 
@@ -69,14 +69,14 @@ Value: cname.vercel-dns.com
 
 ### 1. Verify All Pages Load
 
-- [ ] Homepage: https://solarheim.com
-- [ ] Solar Calculator: https://solarheim.com/solarrechner
-- [ ] Costs Page: https://solarheim.com/solaranlage-kosten
-- [ ] Battery Storage: https://solarheim.com/solaranlage-mit-speicher
-- [ ] City Pages: https://solarheim.com/solaranlage-zuerich
-- [ ] Thank You: https://solarheim.com/danke
-- [ ] Privacy: https://solarheim.com/datenschutz
-- [ ] Imprint: https://solarheim.com/impressum
+- [ ] Homepage: https://solarheim.ch
+- [ ] Solar Calculator: https://solarheim.ch/solarrechner
+- [ ] Costs Page: https://solarheim.ch/solaranlage-kosten
+- [ ] Battery Storage: https://solarheim.ch/solaranlage-mit-speicher
+- [ ] City Pages: https://solarheim.ch/solaranlage-zuerich
+- [ ] Thank You: https://solarheim.ch/danke
+- [ ] Privacy: https://solarheim.ch/datenschutz
+- [ ] Imprint: https://solarheim.ch/impressum
 
 ### 2. Test Lead Form
 
@@ -88,8 +88,8 @@ Value: cname.vercel-dns.com
 
 ### 3. SEO Verification
 
-- [ ] Check robots.txt: https://solarheim.com/robots.txt
-- [ ] Check sitemap: https://solarheim.com/sitemap.xml
+- [ ] Check robots.txt: https://solarheim.ch/robots.txt
+- [ ] Check sitemap: https://solarheim.ch/sitemap.xml
 - [ ] Verify meta tags on all pages (use view-source)
 - [ ] Test mobile responsiveness
 - [ ] Check page load speed (use PageSpeed Insights)
@@ -125,9 +125,9 @@ import Script from 'next/script';
 ### 5. Search Console Setup
 
 1. Go to [search.google.com/search-console](https://search.google.com/search-console)
-2. Add property: solarheim.com
+2. Add property: solarheim.ch
 3. Verify ownership (DNS or HTML file method)
-4. Submit sitemap: https://solarheim.com/sitemap.xml
+4. Submit sitemap: https://solarheim.ch/sitemap.xml
 
 ## Backend Integration
 
@@ -208,8 +208,8 @@ export async function POST(request: Request) {
   const body = await request.json();
 
   await resend.emails.send({
-    from: 'noreply@solarheim.com',
-    to: 'info@solarheim.com',
+    from: 'noreply@solarheim.ch',
+    to: 'info@solarheim.ch',
     subject: 'Neue Solaranfrage',
     html: `
       <h2>Neue Anfrage von ${body.firstName} ${body.lastName}</h2>
@@ -294,7 +294,7 @@ To update content, edit the relevant files:
 For deployment issues:
 - Vercel Docs: https://vercel.com/docs
 - Next.js Docs: https://nextjs.org/docs
-- Solarheim Contact: info@solarheim.com
+- Solarheim Contact: info@solarheim.ch
 
 ## Production Checklist
 

@@ -5,11 +5,12 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Analytics } from "@/components/Analytics";
 import { Suspense } from "react";
+import StructuredData from "@/components/StructuredData";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://solarheim.com'),
+  metadataBase: new URL('https://solarheim.ch'),
   title: {
     default: 'Solarheim - Solaranlagen in der Schweiz vergleichen | Kostenlose Offerten',
     template: '%s | Solarheim',
@@ -32,8 +33,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'de_CH',
-    url: 'https://solarheim.com',
-    siteName: 'Solarheim',
+    url: 'https://solarheim.ch',
+    siteName: 'SolarHeim',
     title: 'Solarheim - Solaranlagen in der Schweiz vergleichen',
     description: 'Kostenlos mehrere Solaranlagen-Angebote von geprüften Schweizer Installateuren vergleichen. Bis zu 30% sparen.',
     images: [
@@ -74,6 +75,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="de-CH" className="scroll-smooth">
+      <head>
+        <StructuredData />
+      </head>
       <body className={inter.className}>
         <Suspense fallback={null}>
           <Analytics />

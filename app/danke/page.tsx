@@ -78,9 +78,9 @@ export default function ThankYouPage() {
           <div className="bg-gray-50 rounded-xl p-6 mb-8">
             <h3 className="font-bold text-gray-900 mb-4">Fragen? Wir sind für Sie da</h3>
             <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm">
-              <a href="mailto:info@solarheim.com" className="flex items-center justify-center gap-2 text-gray-700 hover:text-primary transition-colors">
+              <a href="mailto:info@solarheim.ch" className="flex items-center justify-center gap-2 text-gray-700 hover:text-primary transition-colors">
                 <Mail className="w-4 h-4" />
-                info@solarheim.com
+                info@solarheim.ch
               </a>
               <a href="tel:+41774420059" className="flex items-center justify-center gap-2 text-gray-700 hover:text-primary transition-colors">
                 <Phone className="w-4 h-4" />
@@ -96,7 +96,7 @@ export default function ThankYouPage() {
               <div className="text-left">
                 <p className="text-sm text-gray-700">
                   <strong>Hinweis:</strong> Bitte überprüfen Sie auch Ihren Spam-Ordner. Manchmal landen unsere E-Mails dort.
-                  Fügen Sie info@solarheim.com zu Ihren Kontakten hinzu, um alle Nachrichten zu erhalten.
+                  Fügen Sie info@solarheim.ch zu Ihren Kontakten hinzu, um alle Nachrichten zu erhalten.
                 </p>
               </div>
             </div>

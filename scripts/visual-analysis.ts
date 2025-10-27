@@ -24,7 +24,7 @@ interface VisualCheckResult {
 
 async function visualCheck(url: string, siteName: string): Promise<VisualCheckResult> {
   const timestamp = new Date().toISOString().replace(/[:.]/g, '-').slice(0, -5);
-  const outputDir = path.join('/Users/claudiocronin/websites/sites/solarheim.com/.claude/agents/visual-check-agent/outputs', siteName, timestamp);
+  const outputDir = path.join('/Users/claudiocronin/websites/sites/solarheim.ch/.claude/agents/visual-check-agent/outputs', siteName, timestamp);
 
   fs.mkdirSync(outputDir, { recursive: true });
 
