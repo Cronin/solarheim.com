@@ -1,26 +1,26 @@
-import { Shield, Lock, Award, Users } from 'lucide-react';
+import Image from 'next/image';
 
 export default function TrustBadges() {
   const badges = [
     {
-      icon: Award,
+      image: '/images/badges/tuv-gepruft.svg',
       title: 'TÜV geprüft',
       description: 'Zertifizierte Qualität',
     },
     {
-      icon: Lock,
+      image: '/images/badges/ssl-sicher.svg',
       title: 'SSL verschlüsselt',
       description: 'Sichere Datenübertragung',
     },
     {
-      icon: Shield,
+      image: '/images/badges/datenschutz.svg',
       title: 'Datenschutz konform',
       description: 'DSGVO-konform',
     },
     {
-      icon: Users,
-      title: '500+ Partner',
-      description: 'Schweizweites Netzwerk',
+      image: '/images/badges/swiss-quality.svg',
+      title: 'Schweizer Qualität',
+      description: '100% Swiss Made',
     },
   ];
 
@@ -42,8 +42,14 @@ export default function TrustBadges() {
               key={index}
               className="bg-gray-800 rounded-xl p-6 text-center hover:bg-gray-750 transition-colors"
             >
-              <div className="inline-flex items-center justify-center w-12 h-12 bg-primary-500/20 rounded-lg mb-4">
-                <badge.icon className="w-6 h-6 text-primary-400" />
+              <div className="inline-flex items-center justify-center w-24 h-24 mb-4 mx-auto">
+                <Image
+                  src={badge.image}
+                  alt={badge.title}
+                  width={96}
+                  height={96}
+                  className="w-full h-full"
+                />
               </div>
               <h3 className="font-bold text-white mb-1">
                 {badge.title}

@@ -6,6 +6,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FormData, step1Schema, step2Schema, step3Schema, step4Schema, fullFormSchema } from '@/lib/formSchema';
+import { trackFormStart, trackFormStep, trackFormComplete, trackFormAbandonment } from '@/lib/analytics';
 import ProgressBar from './ProgressBar';
 import Step1Property from './Step1Property';
 import Step2Energy from './Step2Energy';
@@ -36,6 +37,9 @@ export default function FormContainer() {
 
   // Load form data from localStorage on mount
   useEffect(() => {
+    // Track form start when component mounts
+    trackFormStart();
+
     const savedData = localStorage.getItem(STORAGE_KEY);
     if (savedData) {
       try {
@@ -57,6 +61,16 @@ export default function FormContainer() {
   const onSubmit = async (data: FormData) => {
     console.log('Form submitted:', data);
     setIsSubmitting(true);
+
+    // Track form completion with anonymized data
+    trackFormComplete({
+      propertyType: data.propertyType,
+      ownership: data.ownershipStatus,
+      consumption: data.annualConsumption,
+      storageInterest: data.batteryInterest,
+      postalCode: data.postalCode,
+      city: data.city,
+    });
 
     // Simulate API call
     await new Promise((resolve) => setTimeout(resolve, 1500));
@@ -95,8 +109,14 @@ export default function FormContainer() {
     const isValid = await validateStep(currentStep);
 
     if (isValid) {
+      // Track step completion
+      const stepNames = ['Immobilie', 'Energiebedarf', 'Standort', 'Kontakt'];
+      trackFormStep(currentStep, stepNames[currentStep - 1]);
+
       // Check if user is a tenant (mieter) in step 1
       if (currentStep === 1 && formData.ownershipStatus === 'mieter') {
+        // Track abandonment for tenants
+        trackFormAbandonment(1, 'Immobilie - Mieter');
         return; // Don't proceed if user is a tenant
       }
 
