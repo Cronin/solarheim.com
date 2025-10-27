@@ -73,7 +73,7 @@ export default function Step4Contact({ register, errors }: Step4ContactProps) {
       <div>
         <label className="label flex items-center gap-2">
           <Phone className="w-4 h-4 text-primary" />
-          Telefonnummer (optional, aber empfohlen)
+          Telefonnummer
         </label>
         <input
           type="tel"
@@ -81,8 +81,11 @@ export default function Step4Contact({ register, errors }: Step4ContactProps) {
           {...register('phone')}
           className="input-field"
         />
+        {errors.phone && (
+          <p className="mt-1 text-sm text-red-600">{errors.phone.message}</p>
+        )}
         <p className="mt-1 text-sm text-gray-600">
-          Mit Telefonnummer erhalten Sie schneller passende Angebote
+          Damit wir Sie für Rückfragen erreichen können
         </p>
       </div>
 

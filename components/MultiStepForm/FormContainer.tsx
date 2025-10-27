@@ -112,7 +112,7 @@ export default function FormContainer() {
         isValid = await trigger(['postalCode', 'city', 'roofType']);
         break;
       case 4:
-        isValid = await trigger(['firstName', 'lastName', 'email', 'privacyAccepted']);
+        isValid = await trigger(['firstName', 'lastName', 'email', 'phone', 'privacyAccepted']);
         break;
       default:
         isValid = false;

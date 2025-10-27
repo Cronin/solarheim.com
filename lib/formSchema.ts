@@ -30,7 +30,8 @@ export const step4Schema = z.object({
   firstName: z.string().min(2, 'Vorname muss mindestens 2 Zeichen haben'),
   lastName: z.string().min(2, 'Nachname muss mindestens 2 Zeichen haben'),
   email: z.string().email('Bitte geben Sie eine gültige E-Mail-Adresse ein'),
-  phone: z.string().optional(),
+  phone: z.string().min(10, 'Bitte geben Sie eine gültige Telefonnummer ein'),
+  comments: z.string().optional(),
   privacyAccepted: z.boolean().refine((val) => val === true, {
     message: 'Sie müssen die Datenschutzerklärung akzeptieren',
   }),

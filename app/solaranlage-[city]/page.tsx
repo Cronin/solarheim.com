@@ -191,38 +191,74 @@ export default function CityPage({ params }: PageProps) {
         </div>
       </section>
 
-      {/* Image + Map Section */}
+      {/* Solar Installation Hero Section with Background Image */}
+      <section className="relative section-padding bg-gray-900">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/hero-solar-panels.webp"
+            alt={`Solaranlage Installation in ${city.name}`}
+            fill
+            className="object-cover opacity-40"
+            priority={false}
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-gray-900/60 to-gray-900/80"></div>
+        </div>
+
+        {/* Content */}
+        <div className="container-custom max-w-4xl relative z-10">
+          <div className="text-center text-white">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              Professionelle Solarinstallation in {city.name}
+            </h2>
+            <p className="text-xl text-gray-200 mb-6">
+              Erfahrene Solarteure aus Ihrer Region installieren Ihre massgeschneiderte Photovoltaikanlage
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                <div className="text-3xl font-bold text-primary-200 mb-1">25+</div>
+                <div className="text-sm text-gray-200">Jahre Lebensdauer</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                <div className="text-3xl font-bold text-primary-200 mb-1">30%</div>
+                <div className="text-sm text-gray-200">Förderung möglich</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                <div className="text-3xl font-bold text-primary-200 mb-1">10-15</div>
+                <div className="text-sm text-gray-200">Jahre Amortisation</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Google Maps Section */}
       <section className="section-padding bg-gray-50">
         <div className="container-custom max-w-6xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            {/* Solar Panel Image */}
-            <div className="relative rounded-2xl overflow-hidden shadow-xl">
-              <Image
-                src="/images/hero-solar-panels.webp"
-                alt={`Solaranlage Installation in ${city.name}`}
-                width={600}
-                height={400}
-                className="w-full h-full object-cover"
-              />
-            </div>
+          <div className="text-center mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
+              Solarteure in {city.name} und Umgebung
+            </h2>
+            <p className="text-gray-600">
+              Unser Netzwerk umfasst geprüfte Fachbetriebe in der gesamten Region {city.canton}
+            </p>
+          </div>
 
-            {/* Google Maps */}
-            <div className="relative rounded-2xl overflow-hidden shadow-xl h-[400px]">
-              <iframe
-                src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyDQF_fL_qx_1QZVlvJFNRl5ETBhjcJOFAE&q=${encodeURIComponent(city.name + ', Schweiz')}&zoom=12`}
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title={`Karte von ${city.name}`}
-              />
-              <div className="absolute bottom-4 left-4 bg-white px-4 py-2 rounded-lg shadow-lg">
-                <div className="flex items-center gap-2">
-                  <MapPin className="w-4 h-4 text-primary" />
-                  <span className="font-semibold text-gray-900">{city.name}</span>
-                </div>
+          <div className="relative rounded-2xl overflow-hidden shadow-xl h-[500px]">
+            <iframe
+              src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyDQF_fL_qx_1QZVlvJFNRl5ETBhjcJOFAE&q=${encodeURIComponent(city.name + ', Schweiz')}&zoom=12`}
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title={`Karte von ${city.name}`}
+            />
+            <div className="absolute bottom-6 left-6 bg-white px-6 py-3 rounded-lg shadow-lg">
+              <div className="flex items-center gap-2">
+                <MapPin className="w-5 h-5 text-primary" />
+                <span className="font-semibold text-gray-900 text-lg">{city.name}</span>
               </div>
             </div>
           </div>

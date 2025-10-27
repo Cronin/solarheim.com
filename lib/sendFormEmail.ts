@@ -19,15 +19,22 @@ export async function sendFormEmail(formData: FormData): Promise<boolean> {
       return false;
     }
 
+    // Get current domain (works for all 31 domains automatically!)
+    const currentDomain = typeof window !== 'undefined'
+      ? window.location.hostname
+      : 'solarheim.ch';
+
     // Format form data for email
     const emailBody = {
       access_key: accessKey,
-      subject: `Neue Solaranlage Anfrage von ${formData.firstName} ${formData.lastName}`,
+      subject: `Neue Solaranlage Anfrage von ${formData.firstName} ${formData.lastName} (${currentDomain})`,
       from_name: `${formData.firstName} ${formData.lastName}`,
       email: formData.email,
-      message: formatFormDataAsHTML(formData),
-      // Optional: Custom redirect after submit (handled client-side)
-      redirect: 'https://solarheim.ch/danke',
+      message: formatFormDataAsHTML(formData, currentDomain),
+      // Hidden field to identify source domain (for filtering in Web3Forms dashboard)
+      domain: currentDomain,
+      // Honeypot field for spam protection (empty = human)
+      botcheck: '',
     };
 
     const response = await fetch('https://api.web3forms.com/submit', {
@@ -57,7 +64,7 @@ export async function sendFormEmail(formData: FormData): Promise<boolean> {
 /**
  * Format form data as HTML for email
  */
-function formatFormDataAsHTML(data: FormData): string {
+function formatFormDataAsHTML(data: FormData, domain: string = 'solarheim.ch'): string {
   const propertyTypeLabels: Record<string, string> = {
     einfamilienhaus: 'Einfamilienhaus',
     mehrfamilienhaus: 'Mehrfamilienhaus',
@@ -148,7 +155,7 @@ function formatFormDataAsHTML(data: FormData): string {
 
       <div style="margin-top: 40px; padding: 20px; background: #f3f4f6; border-radius: 8px; text-align: center;">
         <p style="margin: 0; color: #666; font-size: 14px;">
-          Diese Anfrage wurde über das Kontaktformular auf <strong>solarheim.ch</strong> gesendet
+          Diese Anfrage wurde über das Kontaktformular auf <strong>${domain}</strong> gesendet
         </p>
         <p style="margin: 5px 0 0 0; color: #999; font-size: 12px;">
           Zeitstempel: ${new Date().toLocaleString('de-CH')}
@@ -161,7 +168,7 @@ function formatFormDataAsHTML(data: FormData): string {
 /**
  * Format form data as plain text for email (fallback)
  */
-export function formatFormDataAsText(data: FormData): string {
+export function formatFormDataAsText(data: FormData, domain: string = 'solarheim.ch'): string {
   return `
 Neue Solaranlage Anfrage
 
@@ -186,7 +193,7 @@ Dachtyp: ${data.roofType}
 ${data.comments ? `ZUSÄTZLICHE INFORMATIONEN:\n${data.comments}` : ''}
 
 ---
-Anfrage von: solarheim.ch
+Anfrage von: ${domain}
 Zeitstempel: ${new Date().toLocaleString('de-CH')}
   `.trim();
 }
