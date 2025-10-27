@@ -8,6 +8,16 @@ export default function TrustBadges() {
       description: 'Zertifizierte Qualität',
     },
     {
+      image: '/images/badge-ssl-cert.webp',
+      title: 'SSL verschlüsselt',
+      description: 'Sichere Datenübertragung',
+    },
+    {
+      image: '/images/badge-datenschutz-cert.webp',
+      title: 'Datenschutz konform',
+      description: 'DSGVO-konform',
+    },
+    {
       image: '/images/badge-swiss-cert.webp',
       title: 'Schweizer Qualität',
       description: '100% Swiss Made',
@@ -26,19 +36,19 @@ export default function TrustBadges() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 lg:gap-12 max-w-3xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
           {badges.map((badge, index) => (
             <div
               key={index}
-              className="bg-gray-800 rounded-2xl p-8 text-center hover:bg-gray-750 transition-all hover:scale-105"
+              className="bg-gray-800 rounded-2xl p-6 text-center hover:bg-gray-750 transition-all hover:scale-105"
             >
-              <div className="inline-flex items-center justify-center mb-6 mx-auto">
+              <div className="inline-flex items-center justify-center mb-4 mx-auto">
                 <Image
                   src={badge.image}
                   alt={badge.title}
-                  width={200}
-                  height={200}
-                  className="w-48 h-48 object-contain"
+                  width={150}
+                  height={150}
+                  className="w-32 h-32 md:w-36 md:h-36 object-contain"
                 />
               </div>
               <h3 className="font-bold text-white text-lg mb-2">
