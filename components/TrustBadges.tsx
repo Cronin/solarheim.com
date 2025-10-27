@@ -3,22 +3,22 @@ import Image from 'next/image';
 export default function TrustBadges() {
   const badges = [
     {
-      image: '/images/badges/tuv-gepruft.svg',
+      image: '/images/badges/tuv-simple.svg',
       title: 'TÜV geprüft',
       description: 'Zertifizierte Qualität',
     },
     {
-      image: '/images/badges/ssl-sicher.svg',
+      image: '/images/badges/ssl-simple.svg',
       title: 'SSL verschlüsselt',
       description: 'Sichere Datenübertragung',
     },
     {
-      image: '/images/badges/datenschutz.svg',
+      image: '/images/badges/datenschutz-simple.svg',
       title: 'Datenschutz konform',
       description: 'DSGVO-konform',
     },
     {
-      image: '/images/badges/swiss-quality.svg',
+      image: '/images/badges/swiss-simple.svg',
       title: 'Schweizer Qualität',
       description: '100% Swiss Made',
     },

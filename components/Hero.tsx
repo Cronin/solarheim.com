@@ -1,6 +1,7 @@
 'use client';
 
 import { CheckCircle } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Hero() {
   return (
@@ -41,13 +42,15 @@ export default function Hero() {
 
           {/* Right Column - Image */}
           <div className="relative">
-            <div className="aspect-square lg:aspect-auto lg:h-[500px] bg-gradient-to-br from-primary-100 to-trust-100 rounded-2xl overflow-hidden shadow-2xl">
-              <div className="w-full h-full flex items-center justify-center">
-                <svg className="w-2/3 h-2/3 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/>
-                  <circle cx="12" cy="12" r="10" strokeDasharray="2 2"/>
-                </svg>
-              </div>
+            <div className="aspect-square lg:aspect-auto lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-primary-50 to-white">
+              <Image
+                src="/images/hero-modern.svg"
+                alt="Solaranlagen in der Schweiz - Haus mit Solarpanels"
+                width={600}
+                height={600}
+                className="w-full h-full object-contain"
+                priority
+              />
             </div>
             {/* Floating Badge */}
             <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg p-4 border border-gray-100">
