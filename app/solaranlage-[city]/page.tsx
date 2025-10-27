@@ -209,7 +209,7 @@ export default function CityPage({ params }: PageProps) {
             {/* Google Maps */}
             <div className="relative rounded-2xl overflow-hidden shadow-xl h-[400px]">
               <iframe
-                src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=${encodeURIComponent(city.name + ', Schweiz')}&zoom=12`}
+                src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyDQF_fL_qx_1QZVlvJFNRl5ETBhjcJOFAE&q=${encodeURIComponent(city.name + ', Schweiz')}&zoom=12`}
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
