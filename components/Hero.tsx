@@ -14,8 +14,11 @@ export default function Hero() {
               Solaranlagen in der Schweiz vergleichen –{' '}
               <span className="text-primary">kostenlos & unverbindlich</span>
             </h1>
-            <p className="text-lg text-gray-500 italic mb-6">
+            <p className="text-lg text-gray-500 italic mb-4">
               Basierend auf Ihren Angaben analysieren wir Ihr Dach und verbinden Sie mit den besten Solarteuren in Ihrer Region
+            </p>
+            <p className="text-base text-gray-600 mb-6">
+              Solarheim arbeitet ausschließlich mit geprüften Schweizer Fachbetrieben zusammen – sicher, transparent und unabhängig.
             </p>
             <p className="text-xl text-gray-600 mb-8">
               Solarheim findet für Sie die besten Solarteure in Ihrer Region. Sparen Sie bis zu 30% durch den Vergleich mehrerer Offerten.

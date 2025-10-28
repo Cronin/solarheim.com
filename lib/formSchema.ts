@@ -21,6 +21,7 @@ export const step2Schema = z.object({
 export const step3Schema = z.object({
   postalCode: z.string().min(4, 'Bitte geben Sie eine gültige PLZ ein').max(4, 'PLZ muss 4 Ziffern haben'),
   city: z.string().min(2, 'Bitte geben Sie eine Stadt ein'),
+  street: z.string().optional(),
   roofType: z.enum(['flachdach', 'schraegdach', 'gemischt', 'weiss-nicht'], {
     required_error: 'Bitte wählen Sie einen Dachtyp',
   }),

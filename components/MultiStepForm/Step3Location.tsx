@@ -61,6 +61,18 @@ export default function Step3Location({ register, errors, watch }: Step3Location
             )}
           </div>
         </div>
+        <div className="mt-4">
+          <input
+            type="text"
+            placeholder="z.B. Bahnhofstrasse 12"
+            {...register('street')}
+            className="input-field"
+          />
+          <p className="mt-1 text-xs text-gray-500">Straße und Hausnummer (optional)</p>
+          {errors.street && (
+            <p className="mt-1 text-sm text-red-600">{errors.street.message}</p>
+          )}
+        </div>
       </div>
 
       <div>

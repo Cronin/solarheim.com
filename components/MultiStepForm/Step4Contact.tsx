@@ -14,7 +14,7 @@ export default function Step4Contact({ register, errors }: Step4ContactProps) {
     <div className="space-y-8">
       <div>
         <h2 className="text-2xl font-bold text-gray-900 mb-2">
-          Fast geschafft!
+          Nur noch ein Schritt zu Ihren Solarangeboten!
         </h2>
         <p className="text-gray-600">
           Geben Sie Ihre Kontaktdaten ein, um Ihre kostenlosen Offerten zu erhalten
