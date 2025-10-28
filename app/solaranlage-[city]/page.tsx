@@ -41,6 +41,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: `Solaranlage ${city.name} - Kostenlose Offerten vergleichen`,
     description: `Solarheim vermittelt Ihnen kostenlos mehrere Angebote für Solaranlagen in ${city.name}. Finden Sie jetzt den besten Solarteur – unverbindlich & schnell.`,
+    alternates: {
+      canonical: `https://solarheim.ch/solaranlage-${params.city}`,
+    },
     openGraph: {
       title: `Solaranlage ${city.name} - Photovoltaik Offerte vergleichen`,
       description: `Kostenlos Solaranlagen-Angebote in ${city.name} vergleichen. Geprüfte lokale Installateure, bis zu 30% sparen.`,

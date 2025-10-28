@@ -11,6 +11,9 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://solarheim.ch'),
+  alternates: {
+    canonical: 'https://solarheim.ch',
+  },
   title: {
     default: 'Solarheim - Solaranlagen in der Schweiz vergleichen | Kostenlose Offerten',
     template: '%s | Solarheim',
