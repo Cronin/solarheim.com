@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Analytics } from "@/components/Analytics";
+import ScrollTracking from "@/components/ScrollTracking";
 import { Suspense } from "react";
 import StructuredData from "@/components/StructuredData";
 
@@ -85,6 +86,7 @@ export default function RootLayout({
         <Suspense fallback={null}>
           <Analytics />
         </Suspense>
+        <ScrollTracking />
         <Header />
         <main>{children}</main>
         <Footer />

@@ -77,6 +77,15 @@ export const trackFormStart = () => {
       formStep: 1,
       formAction: 'started',
     });
+
+    // Google Ads Conversion: Form Start (easiest conversion for initial data)
+    window.dataLayer.push({
+      event: 'conversion',
+      conversionType: 'form_start',
+      conversionLabel: 'FORM_START',
+      value: 0.1,
+      currency: 'CHF',
+    });
   }
 };
 
@@ -96,6 +105,24 @@ export const trackFormStep = (step: number, stepName: string) => {
       formStep: step,
       formStepName: stepName,
       formAction: 'step_completed',
+    });
+
+    // Google Ads Conversion: Each step gets its own conversion
+    // Value increases with each step (more qualified leads)
+    const conversionValues: { [key: number]: number } = {
+      1: 0.5,  // Step 1: Property Type (easy conversion)
+      2: 2,    // Step 2: Energy needs (more qualified)
+      3: 5,    // Step 3: Location (very qualified)
+      4: 10,   // Step 4: Contact info (almost there!)
+    };
+
+    window.dataLayer.push({
+      event: 'conversion',
+      conversionType: `form_step_${step}`,
+      conversionLabel: `FORM_STEP_${step}`,
+      value: conversionValues[step] || 1,
+      currency: 'CHF',
+      stepName: stepName,
     });
   }
 };
@@ -133,11 +160,13 @@ export const trackFormComplete = (formData: {
       },
     });
 
-    // Conversion event for Google Ads (if using)
+    // Google Ads Conversion: LEAD COMPLETE (highest value)
+    // This is the main conversion you'll optimize for once you have enough data
     window.dataLayer.push({
       event: 'conversion',
-      send_to: 'AW-CONVERSION_ID/CONVERSION_LABEL', // Replace with actual values
-      value: 1.0,
+      conversionType: 'lead_complete',
+      conversionLabel: 'LEAD_COMPLETE',
+      value: 50.0, // High value - this is a qualified lead
       currency: 'CHF',
     });
   }
@@ -197,6 +226,16 @@ export const trackCalculatorUse = (roofSize?: number, consumption?: number) => {
       toolName: 'solar_calculator',
       roofSize: roofSize || 0,
       consumption: consumption || 0,
+    });
+
+    // Google Ads Conversion: Calculator usage (engagement conversion)
+    // Users who calculate are more likely to convert
+    window.dataLayer.push({
+      event: 'conversion',
+      conversionType: 'calculator_used',
+      conversionLabel: 'CALCULATOR_USED',
+      value: 1.5, // Good engagement indicator
+      currency: 'CHF',
     });
   }
 };
@@ -273,6 +312,23 @@ export const trackScrollDepth = (depth: number) => {
       window.dataLayer.push({
         event: 'scroll_tracking',
         scrollDepth: depth,
+      });
+
+      // Google Ads Conversion: Scroll depth (engagement conversion)
+      // Start with 50% scroll as first conversion, then move to deeper engagement
+      const conversionValues: { [key: number]: number } = {
+        25: 0.1,  // Light engagement
+        50: 0.3,  // Good engagement - use this initially for Google Ads
+        75: 0.5,  // Strong engagement
+        100: 1.0, // Full page read
+      };
+
+      window.dataLayer.push({
+        event: 'conversion',
+        conversionType: `scroll_${depth}`,
+        conversionLabel: `SCROLL_${depth}`,
+        value: conversionValues[depth] || 0.1,
+        currency: 'CHF',
       });
     }
   }
