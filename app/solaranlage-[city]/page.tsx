@@ -195,40 +195,40 @@ export default function CityPage({ params }: PageProps) {
       </section>
 
       {/* Solar Installation Hero Section with Background Image */}
-      <section className="relative section-padding bg-gray-900">
+      <section className="relative section-padding bg-gray-900 overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
             src="/images/hero-solar-panels.webp"
             alt={`Solaranlage Installation in ${city.name}`}
             fill
-            className="object-cover opacity-40"
+            className="object-cover opacity-30"
             priority={false}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-gray-900/60 to-gray-900/80"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-gray-900/75 to-gray-900/90"></div>
         </div>
 
         {/* Content */}
         <div className="container-custom max-w-4xl relative z-10">
           <div className="text-center text-white">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4 drop-shadow-lg">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
               Professionelle Solarinstallation in {city.name}
             </h2>
-            <p className="text-xl text-gray-100 mb-6 drop-shadow-md">
+            <p className="text-xl text-white mb-8 drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
               Erfahrene Solarteure aus Ihrer Region installieren Ihre massgeschneiderte Photovoltaikanlage
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-                <div className="text-3xl font-bold text-primary-200 mb-1">25+</div>
-                <div className="text-sm text-gray-200">Jahre Lebensdauer</div>
+              <div className="group bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/30 hover:bg-white/20 hover:border-white/50 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                <div className="text-4xl font-bold text-white mb-2 drop-shadow-lg">25+</div>
+                <div className="text-sm text-white/90 font-medium">Jahre Lebensdauer</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-                <div className="text-3xl font-bold text-primary-200 mb-1">30%</div>
-                <div className="text-sm text-gray-200">Förderung möglich</div>
+              <div className="group bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/30 hover:bg-white/20 hover:border-white/50 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                <div className="text-4xl font-bold text-white mb-2 drop-shadow-lg">30%</div>
+                <div className="text-sm text-white/90 font-medium">Förderung möglich</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-                <div className="text-3xl font-bold text-primary-200 mb-1">10-15</div>
-                <div className="text-sm text-gray-200">Jahre Amortisation</div>
+              <div className="group bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/30 hover:bg-white/20 hover:border-white/50 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                <div className="text-4xl font-bold text-white mb-2 drop-shadow-lg">4-6</div>
+                <div className="text-sm text-white/90 font-medium">Jahre Amortisation</div>
               </div>
             </div>
           </div>
