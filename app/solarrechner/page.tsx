@@ -68,14 +68,14 @@ export default function SolarrechnerPage() {
               <div className="card">
                 <h3 className="text-lg font-bold text-gray-900 mb-2">Kosten</h3>
                 <p className="text-gray-600">
-                  Die Kosten pro kWp liegen aktuell zwischen 2.200 und 2.800 CHF inkl. Installation, vor Abzug der Förderungen.
+                  Aktuelle Preise liegen zwischen 1.800 und 2.500 CHF pro kWp, inklusive Installation – vor Abzug der Fördergelder.
                 </p>
               </div>
 
               <div className="card">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Einsparungen</h3>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Ersparnis</h3>
                 <p className="text-gray-600">
-                  Bei einem Strompreis von 25 Rp/kWh sparen Sie durch Eigenverbrauch deutlich mehr als durch reine Einspeisung.
+                  Bei einem Strompreis von 32 Rp/kWh senken Sie mit Eigenverbrauch Ihre Energiekosten deutlich – oft um mehrere Hundert Franken pro Jahr.
                 </p>
               </div>
             </div>
