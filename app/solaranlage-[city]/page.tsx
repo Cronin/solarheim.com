@@ -211,10 +211,10 @@ export default function CityPage({ params }: PageProps) {
         {/* Content */}
         <div className="container-custom max-w-4xl relative z-10">
           <div className="text-center text-white">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 drop-shadow-lg">
               Professionelle Solarinstallation in {city.name}
             </h2>
-            <p className="text-xl text-gray-200 mb-6">
+            <p className="text-xl text-gray-100 mb-6 drop-shadow-md">
               Erfahrene Solarteure aus Ihrer Region installieren Ihre massgeschneiderte Photovoltaikanlage
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
