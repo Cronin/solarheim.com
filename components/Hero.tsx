@@ -10,10 +10,13 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Text */}
           <div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 leading-tight">
               Solaranlagen in der Schweiz vergleichen –{' '}
               <span className="text-primary">kostenlos & unverbindlich</span>
             </h1>
+            <p className="text-lg text-gray-500 italic mb-6">
+              Basierend auf Ihren Angaben analysieren wir Ihr Dach und verbinden Sie mit den besten Solarteuren in Ihrer Region
+            </p>
             <p className="text-xl text-gray-600 mb-8">
               Solarheim findet für Sie die besten Solarteure in Ihrer Region. Sparen Sie bis zu 30% durch den Vergleich mehrerer Offerten.
             </p>

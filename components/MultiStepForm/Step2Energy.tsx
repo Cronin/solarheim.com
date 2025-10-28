@@ -15,10 +15,10 @@ export default function Step2Energy({ register, errors, watch }: Step2EnergyProp
   const batteryInterest = watch('batteryInterest');
 
   const consumptionOptions = [
-    { value: 'unter-2000', label: 'Unter 2000 kWh', description: '1-2 Personen' },
-    { value: '2000-4000', label: '2000-4000 kWh', description: '2-3 Personen' },
-    { value: '4000-6000', label: '4000-6000 kWh', description: '3-4 Personen' },
-    { value: 'ueber-6000', label: 'Über 6000 kWh', description: '4+ Personen' },
+    { value: 'unter-2000', label: 'Unter 2000 kWh', description: 'Bis zu 1000 CHF' },
+    { value: '2000-4000', label: '2000-4000 kWh', description: 'Zwischen 1000 CHF und 2000 CHF' },
+    { value: '4000-6000', label: '4000-6000 kWh', description: 'Zwischen 2000 CHF und 5000 CHF' },
+    { value: 'ueber-6000', label: 'Über 6000 kWh', description: 'Über 5000 CHF' },
   ];
 
   const batteryOptions = [
