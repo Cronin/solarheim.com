@@ -18,9 +18,9 @@ export default function SolarCalculator() {
     // Simple calculation logic
     const systemSize = Math.round((roofSize / 7) * 10) / 10; // ~7m² per kWp
     const annualProduction = Math.round(systemSize * 1100); // ~1100 kWh per kWp in Switzerland
-    const costsMin = Math.round(systemSize * 2200); // 2200 CHF per kWp
-    const costsMax = Math.round(systemSize * 2800); // 2800 CHF per kWp
-    const savings = Math.round(Math.min(annualProduction, consumption) * 0.25); // 0.25 CHF per kWh
+    const costsMin = Math.round(systemSize * 1900); // 1900 CHF per kWp
+    const costsMax = Math.round(systemSize * 2500); // 2500 CHF per kWp
+    const savings = Math.round(Math.min(annualProduction, consumption) * 0.32); // 0.32 CHF per kWh
     const averageCost = (costsMin + costsMax) / 2;
     const paybackYears = Math.round((averageCost / savings) * 10) / 10;
 

@@ -26,22 +26,22 @@ export default function SolaranlageKostenPage() {
       size: '3-4 kWp',
       household: '1-2 Personen',
       production: '3.300 - 4.400 kWh/Jahr',
-      costs: '9.000 - 13.000 CHF',
-      withSubsidy: '6.300 - 9.100 CHF',
+      costs: '5.700 - 10.000 CHF',
+      withSubsidy: '4.000 - 7.000 CHF',
     },
     {
       size: '5-6 kWp',
       household: '3-4 Personen',
       production: '5.500 - 6.600 kWh/Jahr',
-      costs: '15.000 - 20.000 CHF',
-      withSubsidy: '10.500 - 14.000 CHF',
+      costs: '9.500 - 15.000 CHF',
+      withSubsidy: '6.700 - 10.500 CHF',
     },
     {
       size: '8-10 kWp',
       household: '4+ Personen',
       production: '8.800 - 11.000 kWh/Jahr',
-      costs: '22.000 - 30.000 CHF',
-      withSubsidy: '15.400 - 21.000 CHF',
+      costs: '15.200 - 25.000 CHF',
+      withSubsidy: '10.600 - 17.500 CHF',
     },
   ];
 
@@ -67,7 +67,7 @@ export default function SolaranlageKostenPage() {
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Auf einen Blick</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div>
-                <div className="text-3xl font-bold text-primary mb-2">15.000 - 20.000 CHF</div>
+                <div className="text-3xl font-bold text-primary mb-2">9.500 - 12.500 CHF</div>
                 <div className="text-gray-700">Durchschnittliche Kosten für 5 kWp Anlage</div>
               </div>
               <div>
@@ -89,11 +89,11 @@ export default function SolaranlageKostenPage() {
             <p className="text-gray-600 leading-relaxed mb-6">
               Die Kosten für eine Photovoltaikanlage in der Schweiz hängen von verschiedenen Faktoren ab: Grösse der Anlage,
               Qualität der Komponenten, Komplexität der Installation und regionale Preisunterschiede. Im Jahr 2024 liegen die
-              Kosten pro installiertem kWp zwischen 2.200 und 2.800 CHF.
+              Kosten pro installiertem kWp zwischen 1.900 und 2.500 CHF.
             </p>
             <p className="text-gray-600 leading-relaxed">
-              Eine typische 5-kWp-Anlage für ein Einfamilienhaus kostet somit zwischen 11.000 und 14.000 CHF vor Abzug der
-              Förderungen. Mit der Einmalvergütung (EIV) des Bundes reduzieren sich die Kosten auf etwa 7.700 bis 9.800 CHF.
+              Eine typische 5-kWp-Anlage für ein Einfamilienhaus kostet somit zwischen 9.500 und 12.500 CHF vor Abzug der
+              Förderungen. Mit der Einmalvergütung (EIV) des Bundes reduzieren sich die Kosten auf etwa 6.700 bis 8.800 CHF.
             </p>
           </div>
 
@@ -114,7 +114,7 @@ export default function SolaranlageKostenPage() {
               ))}
               <div className="flex items-center justify-between py-3 pt-6 border-t-2 border-gray-200">
                 <div className="font-bold text-gray-900 text-lg">Gesamtkosten (5 kWp)</div>
-                <div className="font-bold text-primary text-lg">18.000 - 27.500 CHF</div>
+                <div className="font-bold text-primary text-lg">9.500 - 12.500 CHF</div>
               </div>
             </div>
           </div>
@@ -224,15 +224,15 @@ export default function SolaranlageKostenPage() {
               <div className="space-y-3">
                 <div className="flex justify-between">
                   <span className="text-gray-700">Investitionskosten:</span>
-                  <span className="font-bold">18.000 CHF</span>
+                  <span className="font-bold">11.000 CHF</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-700">Abzgl. Förderung (30%):</span>
-                  <span className="font-bold text-primary">-5.400 CHF</span>
+                  <span className="font-bold text-primary">-3.300 CHF</span>
                 </div>
                 <div className="flex justify-between pt-3 border-t border-primary-200">
                   <span className="text-gray-700">Nettoinvestition:</span>
-                  <span className="font-bold text-primary">12.600 CHF</span>
+                  <span className="font-bold text-primary">7.700 CHF</span>
                 </div>
               </div>
               <div className="space-y-3">
@@ -242,11 +242,11 @@ export default function SolaranlageKostenPage() {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-700">Jährliche Einsparung:</span>
-                  <span className="font-bold">~1.200 CHF</span>
+                  <span className="font-bold">~1.760 CHF</span>
                 </div>
                 <div className="flex justify-between pt-3 border-t border-primary-200">
                   <span className="text-gray-700">Amortisationszeit:</span>
-                  <span className="font-bold text-primary">~10.5 Jahre</span>
+                  <span className="font-bold text-primary">~4.4 Jahre</span>
                 </div>
               </div>
             </div>

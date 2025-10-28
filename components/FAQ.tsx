@@ -15,7 +15,7 @@ interface FAQProps {
 const defaultFAQs: FAQItem[] = [
   {
     question: 'Was kostet eine Solaranlage in der Schweiz?',
-    answer: 'Eine typische Solaranlage für ein Einfamilienhaus kostet zwischen 15.000 und 30.000 CHF. Der genaue Preis hängt von der Grösse der Anlage, der Dachbeschaffenheit und den verwendeten Komponenten ab. Mit einem Batteriespeicher liegen die Kosten höher, zwischen 25.000 und 40.000 CHF.',
+    answer: 'Eine typische Solaranlage für ein Einfamilienhaus kostet zwischen 9.500 und 25.000 CHF. Der genaue Preis hängt von der Grösse der Anlage, der Dachbeschaffenheit und den verwendeten Komponenten ab. Mit einem Batteriespeicher liegen die Kosten höher, zwischen 19.500 und 35.000 CHF.',
   },
   {
     question: 'Wie funktioniert die Vermittlung bei Solarheim?',

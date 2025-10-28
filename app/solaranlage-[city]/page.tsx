@@ -62,7 +62,7 @@ export default function CityPage({ params }: PageProps) {
   const localFAQs = [
     {
       question: `Was kostet eine Solaranlage in ${city.name}?`,
-      answer: `Die Kosten für eine Solaranlage in ${city.name} liegen typischerweise zwischen 15.000 und 30.000 CHF für ein Einfamilienhaus. Der genaue Preis hängt von der Anlagengrösse, Dachbeschaffenheit und den gewählten Komponenten ab. Durch unseren Vergleich können Sie bis zu 30% sparen.`,
+      answer: `Die Kosten für eine Solaranlage in ${city.name} liegen typischerweise zwischen 9.500 und 25.000 CHF für ein Einfamilienhaus. Der genaue Preis hängt von der Anlagengrösse, Dachbeschaffenheit und den gewählten Komponenten ab. Durch unseren Vergleich können Sie bis zu 30% sparen.`,
     },
     {
       question: `Gibt es Förderungen für Solaranlagen in ${city.name}?`,
@@ -181,9 +181,9 @@ export default function CityPage({ params }: PageProps) {
                 Investition in eine eigene Solaranlage immer attraktiver.
               </p>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Eine typische 5-kWp-Solaranlage für ein Einfamilienhaus in {city.name} kostet zwischen 15.000 und 20.000 CHF nach Abzug der
+                Eine typische 5-kWp-Solaranlage für ein Einfamilienhaus in {city.name} kostet zwischen 6.700 und 8.800 CHF nach Abzug der
                 Förderungen. Diese Anlage produziert jährlich etwa 4.500-5.500 kWh Strom, was den durchschnittlichen Bedarf eines Haushalts
-                abdeckt. Durch Eigenverbrauch und Einspeisung ins Netz amortisiert sich die Anlage typischerweise nach 10-15 Jahren.
+                abdeckt. Durch Eigenverbrauch und Einspeisung ins Netz amortisiert sich die Anlage typischerweise nach 4-6 Jahren.
               </p>
               <p className="text-gray-600 leading-relaxed">
                 Mit Solarheim finden Sie schnell und einfach die passenden Solarteure in {city.name}. Vergleichen Sie kostenlos mehrere
