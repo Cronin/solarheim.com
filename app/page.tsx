@@ -36,10 +36,10 @@ export default function HomePage() {
       <section className="section-padding bg-gradient-to-r from-primary to-primary-600 text-white">
         <div className="container-custom text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            Bereit für Ihre eigene Solaranlage?
+            Bereit, Ihren Strom selbst zu produzieren?
           </h2>
           <p className="text-xl mb-8 text-primary-50">
-            Vergleichen Sie jetzt kostenlos Angebote von geprüften Solarteuren
+            Erhalten Sie jetzt kostenlose Offerten von geprüften Schweizer Solarteure – schnell, transparent und unverbindlich.
           </p>
           <a href="#formular" className="bg-white text-primary hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl inline-block">
             Kostenlose Offerte anfordern
