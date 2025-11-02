@@ -14,22 +14,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
-      url: `${baseUrl}/solarrechner`,
+      url: `${baseUrl}/solaranlage-mit-speicher`,
       lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
+      changeFrequency: 'weekly' as const,
       priority: 0.9,
     },
     {
       url: `${baseUrl}/solaranlage-kosten`,
       lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
+      changeFrequency: 'weekly' as const,
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/solaranlage-mit-speicher`,
+      url: `${baseUrl}/solarrechner`,
       lastModified: currentDate,
       changeFrequency: 'monthly' as const,
-      priority: 0.9,
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/datenschutz`,
@@ -45,13 +45,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // City pages
+  // City pages - critical for SEO (weekly crawl)
   const citySlugs = getAllCitySlugs();
   const cityPages = citySlugs.map((slug) => ({
     url: `${baseUrl}/solaranlage-${slug}`,
     lastModified: currentDate,
-    changeFrequency: 'monthly' as const,
-    priority: 0.8,
+    changeFrequency: 'weekly' as const,
+    priority: 0.85,
   }));
 
   return [...staticPages, ...cityPages];

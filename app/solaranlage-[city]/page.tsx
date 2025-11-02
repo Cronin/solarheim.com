@@ -5,6 +5,7 @@ import FormContainer from '@/components/MultiStepForm/FormContainer';
 import USPSection from '@/components/USPSection';
 import TrustBadges from '@/components/TrustBadges';
 import FAQ from '@/components/FAQ';
+import RelatedCities from '@/components/RelatedCities';
 import { Sun, MapPin, TrendingUp, CheckCircle } from 'lucide-react';
 import Image from 'next/image';
 
@@ -39,15 +40,34 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: `Solaranlage ${city.name} - Kostenlose Offerten vergleichen`,
-    description: `Solarheim vermittelt Ihnen kostenlos mehrere Angebote für Solaranlagen in ${city.name}. Finden Sie jetzt den besten Solarteur – unverbindlich & schnell.`,
+    title: `Solaranlage ${city.name} ${city.canton} - Photovoltaik Offerte vergleichen`,
+    description: `Solaranlage ${city.name}: Kostenlos Offerten von geprüften Solarteure vergleichen. ${city.sunshineHours ? `${city.sunshineHours} Sonnenstunden/Jahr` : 'Ideale Bedingungen'}. Bis zu 30% sparen, 100% unverbindlich.`,
+    keywords: [
+      `Solaranlage ${city.name}`,
+      `Photovoltaik ${city.name}`,
+      `Solarteur ${city.name}`,
+      `Solaranlage Kosten ${city.name}`,
+      `Solaranlage ${city.canton}`,
+      `PV Anlage ${city.name}`,
+      `Photovoltaik Offerte ${city.name}`,
+      `Solaranlage mit Speicher ${city.name}`,
+      `Solar Schweiz ${city.canton}`,
+    ],
     alternates: {
       canonical: `https://solarheim.ch/solaranlage-${params.city}`,
     },
     openGraph: {
       title: `Solaranlage ${city.name} - Photovoltaik Offerte vergleichen`,
-      description: `Kostenlos Solaranlagen-Angebote in ${city.name} vergleichen. Geprüfte lokale Installateure, bis zu 30% sparen.`,
+      description: `Kostenlos Solaranlagen-Angebote in ${city.name} vergleichen. ${city.sunshineHours ? `${city.sunshineHours} Sonnenstunden` : 'Top Bedingungen'}. Geprüfte lokale Installateure, bis zu 30% sparen.`,
       url: `https://solarheim.ch/solaranlage-${params.city}`,
+      type: 'website',
+      locale: 'de_CH',
+      siteName: 'SolarHeim',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `Solaranlage ${city.name} - Photovoltaik Offerte`,
+      description: `Kostenlos Solaranlagen-Angebote in ${city.name} vergleichen. Bis zu 30% sparen.`,
     },
   };
 }
@@ -80,6 +100,82 @@ export default function CityPage({ params }: PageProps) {
 
   return (
     <>
+      {/* BreadcrumbList Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://solarheim.ch"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": `Solaranlage ${city.name}`,
+                "item": `https://solarheim.ch/solaranlage-${params.city}`
+              }
+            ]
+          })
+        }}
+      />
+
+      {/* LocalBusiness Schema for City */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": "Solaranlage Installation",
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "SolarHeim",
+              "url": "https://solarheim.ch",
+              "telephone": "+41774420059",
+              "email": "info@solarheim.ch"
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": city.name,
+              "addressRegion": city.canton,
+              "addressCountry": "CH"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "CHF",
+              "availability": "https://schema.org/InStock",
+              "description": `Kostenlose Offerten für Solaranlagen in ${city.name}`,
+              "url": `https://solarheim.ch/solaranlage-${params.city}`
+            }
+          })
+        }}
+      />
+
+      {/* FAQPage Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": localFAQs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
+          })
+        }}
+      />
+
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-primary-50 to-white section-padding">
         <div className="container-custom">
@@ -319,6 +415,8 @@ export default function CityPage({ params }: PageProps) {
       </section>
 
       <FAQ items={localFAQs} />
+
+      <RelatedCities currentCitySlug={params.city} currentCanton={city.canton} />
 
       {/* Final CTA */}
       <section className="section-padding bg-gradient-to-r from-primary to-primary-600 text-white">

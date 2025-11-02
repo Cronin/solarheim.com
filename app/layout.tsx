@@ -90,6 +90,56 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "SolarHeim",
+  "url": "https://solarheim.ch",
+  "logo": "https://solarheim.ch/logo.png",
+  "sameAs": [
+    "https://www.facebook.com/solarheim",
+    "https://www.linkedin.com/company/solarheim"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+41774420059",
+    "contactType": "customer service",
+    "email": "info@solarheim.ch",
+    "areaServed": "CH",
+    "availableLanguage": ["de", "fr", "it"]
+  }
+})
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "url": "https://solarheim.ch",
+  "name": "SolarHeim",
+  "alternateName": "Solar Heim",
+  "description": "Vergleichsplattform für Solaranlagen in der Schweiz",
+  "inLanguage": "de-CH",
+  "potentialAction": {
+    "@type": "OrderAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://solarheim.ch/#formular",
+      "actionPlatform": [
+        "http://schema.org/DesktopWebPlatform",
+        "http://schema.org/MobileWebPlatform"
+      ]
+    }
+  }
+})
+          }}
+        />
       </body>
     </html>
   );
