@@ -1,0 +1,15 @@
+{
+  "domain": "solarheim.com",
+  "property_url": "sc-domain:solarheim.com",
+  "last_updated": "2025-11-05T13:06:26.932270",
+  "gsc_account": "",
+  "language": "",
+  "service_type": "",
+  "data_ranges": {
+    "primary": {
+      "start": "2024-07-12",
+      "end": "2025-11-04",
+      "days": 480
+    }
+  }
+}
