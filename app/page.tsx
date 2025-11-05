@@ -90,7 +90,7 @@ export default function HomePage() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://solarheim.com"
+                "item": "https://solarheim.ch"
               }
             ]
           })
