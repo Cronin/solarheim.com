@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Analytics } from "@/components/Analytics";
@@ -13,7 +13,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL('https://solarheim.ch'),
   alternates: {
-    canonical: 'https://solarheim.ch',
+    canonical: 'https://solarheim.ch/fr',
     languages: {
       'de-CH': 'https://solarheim.ch',
       'fr-CH': 'https://solarheim.ch/fr',
@@ -21,11 +21,11 @@ export const metadata: Metadata = {
     },
   },
   title: {
-    default: 'Solarheim - Solaranlagen in der Schweiz vergleichen | Kostenlose Offerten',
+    default: 'Solarheim - Comparer les installations solaires en Suisse | Devis gratuits',
     template: '%s | Solarheim',
   },
-  description: 'Vergleichen Sie kostenlos Solaranlagen-Angebote von geprüften Installateuren in der Schweiz. Bis zu 30% sparen durch Angebotsvergleich. 100% unverbindlich.',
-  keywords: ['Solaranlage', 'Photovoltaik', 'Solar Schweiz', 'Solaranlage Kosten', 'Solarteur', 'Solaranlage vergleichen'],
+  description: 'Comparez gratuitement les offres d\'installations solaires d\'installateurs certifiés en Suisse. Économisez jusqu\'à 30% grâce à la comparaison. 100% sans engagement.',
+  keywords: ['Installation solaire', 'Photovoltaïque', 'Solaire Suisse', 'Coûts installation solaire', 'Installateur solaire', 'Comparer installations solaires'],
   authors: [{ name: 'Solarheim' }],
   icons: {
     icon: [
@@ -41,24 +41,24 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    locale: 'de_CH',
-    url: 'https://solarheim.ch',
+    locale: 'fr_CH',
+    url: 'https://solarheim.ch/fr',
     siteName: 'SolarHeim',
-    title: 'Solarheim - Solaranlagen in der Schweiz vergleichen',
-    description: 'Kostenlos mehrere Solaranlagen-Angebote von geprüften Schweizer Installateuren vergleichen. Bis zu 30% sparen.',
+    title: 'Solarheim - Comparer les installations solaires en Suisse',
+    description: 'Comparez gratuitement plusieurs offres d\'installations solaires d\'installateurs certifiés suisses. Économisez jusqu\'à 30%.',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Solarheim - Solaranlagen Schweiz',
+        alt: 'Solarheim - Installations Solaires Suisse',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Solarheim - Solaranlagen in der Schweiz vergleichen',
-    description: 'Kostenlos mehrere Solaranlagen-Angebote von geprüften Schweizer Installateuren vergleichen. Bis zu 30% sparen.',
+    title: 'Solarheim - Comparer les installations solaires en Suisse',
+    description: 'Comparez gratuitement les offres d\'installations solaires. Économisez jusqu\'à 30%.',
     images: ['/og-image.jpg'],
   },
   robots: {
@@ -77,13 +77,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default function FrenchLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="de-CH" className="scroll-smooth">
+    <html lang="fr-CH" className="scroll-smooth">
       <head>
         <StructuredData />
       </head>
@@ -116,31 +116,6 @@ export default function RootLayout({
     "email": "info@solarheim.ch",
     "areaServed": "CH",
     "availableLanguage": ["de", "fr", "it"]
-  }
-})
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "url": "https://solarheim.ch",
-  "name": "SolarHeim",
-  "alternateName": "Solar Heim",
-  "description": "Vergleichsplattform für Solaranlagen in der Schweiz",
-  "inLanguage": "de-CH",
-  "potentialAction": {
-    "@type": "OrderAction",
-    "target": {
-      "@type": "EntryPoint",
-      "urlTemplate": "https://solarheim.ch/#formular",
-      "actionPlatform": [
-        "http://schema.org/DesktopWebPlatform",
-        "http://schema.org/MobileWebPlatform"
-      ]
-    }
   }
 })
           }}

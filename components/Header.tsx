@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { Sun, Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -22,7 +23,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             <Link href="/solarrechner" className="text-gray-700 hover:text-primary font-medium transition-colors">
               Solarrechner
             </Link>
@@ -32,6 +33,7 @@ export default function Header() {
             <Link href="/solaranlage-mit-speicher" className="text-gray-700 hover:text-primary font-medium transition-colors">
               Mit Speicher
             </Link>
+            <LanguageSwitcher />
             <a href="#formular" className="btn-primary">
               Offerte anfordern
             </a>
@@ -72,6 +74,9 @@ export default function Header() {
               >
                 Mit Speicher
               </Link>
+              <div className="pt-2 border-t border-gray-200">
+                <LanguageSwitcher />
+              </div>
               <a
                 href="#formular"
                 className="btn-primary text-center"

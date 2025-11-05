@@ -5,7 +5,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://solarheim.ch';
   const currentDate = new Date();
 
-  // Static pages
+  // Static pages - German (default)
   const staticPages = [
     {
       url: baseUrl,
@@ -45,7 +45,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // City pages - critical for SEO (weekly crawl)
+  // French static pages
+  const frenchPages = [
+    {
+      url: `${baseUrl}/fr`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    },
+  ];
+
+  // Italian static pages
+  const italianPages = [
+    {
+      url: `${baseUrl}/it`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    },
+  ];
+
+  // German city pages - critical for SEO (weekly crawl)
   const citySlugs = getAllCitySlugs();
   const cityPages = citySlugs.map((slug) => ({
     url: `${baseUrl}/solaranlage-${slug}`,
@@ -54,5 +74,32 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
-  return [...staticPages, ...cityPages];
+  // Italian city pages
+  const italianCityPages = [
+    {
+      url: `${baseUrl}/it/impianto-fotovoltaico-lugano`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.90, // High priority for Lugano (best solar location)
+    },
+  ];
+
+  // French city pages
+  const frenchCityPages = [
+    {
+      url: `${baseUrl}/fr/installation-solaire-geneve`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    },
+  ];
+
+  return [
+    ...staticPages,
+    ...frenchPages,
+    ...italianPages,
+    ...cityPages,
+    ...italianCityPages,
+    ...frenchCityPages
+  ];
 }
