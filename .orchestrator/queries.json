@@ -1,23 +1,23 @@
 [
   {
     "query": "solarheim",
-    "clicks": 1,
-    "impressions": 4,
-    "ctr": 25.0,
+    "clicks": 2,
+    "impressions": 6,
+    "ctr": 33.33,
     "position": 1.2
   },
   {
     "query": "solarheim gmbh",
     "clicks": 0,
-    "impressions": 1,
+    "impressions": 2,
     "ctr": 0,
-    "position": 4
+    "position": 12
   },
   {
     "query": "solarheim gmbh rezensionen",
     "clicks": 0,
-    "impressions": 5,
+    "impressions": 8,
     "ctr": 0,
-    "position": 7.2
+    "position": 7.6
   }
 ]
